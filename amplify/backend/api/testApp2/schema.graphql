@@ -1,0 +1,56 @@
+type BaseUser @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  email: AWSEmail
+  phoneNumber: AWSPhone
+  firstName: String
+  lastName: String
+  createdAt: AWSDateTime
+}
+
+type JobApplication @model @auth(rules: [{allow: public}]) {
+  id: ID!
+}
+
+type JobPost @model @auth(rules: [{allow: public}]) {
+  id: ID!
+}
+
+type Notification @model @auth(rules: [{allow: public}]) {
+  id: ID!
+}
+
+type Message @model @auth(rules: [{allow: public}]) {
+  id: ID!
+}
+
+type Client @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  companyName: String
+  hiringManagerName: String
+  profilePicture: String
+}
+
+type Creator @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  firstName: String
+  lastName: String
+  address: String
+  profilePicture: AWSURL
+  isInstagram: Boolean
+  isTikTok: Boolean
+  isYoutube: Boolean
+  isTwitter: Boolean
+  niches: [String]!
+  bio: String
+  rating: Float
+  jobs_completed: Int
+  job_views: Int
+  job_shares: Int
+  job_clicks: Int
+  job_likes: Int
+  email: AWSEmail
+  phone: AWSPhone
+  createdAt: AWSDateTime
+  randomString: String
+}
+ 
